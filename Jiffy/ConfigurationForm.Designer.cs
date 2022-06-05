@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.SubjectLabel = new System.Windows.Forms.Label();
             this.SubjectTextBox = new System.Windows.Forms.TextBox();
             this.StartTimeLabel = new System.Windows.Forms.Label();
@@ -223,12 +224,13 @@
             this.Controls.Add(this.SubjectTextBox);
             this.Controls.Add(this.SubjectLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConfigurationForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConfigurationForm";
+            this.Text = "Configuration";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -18,7 +18,7 @@ namespace Jiffy
             StartTimeTextBox.Enabled = true;
             if (!EndTimeCheckBox.Checked)
                 return;
-            if (HourTextBox.Text != "" || MinuteTextBox.Text != "")
+            if (HourTextBox.Text != "0" || MinuteTextBox.Text != "00")
             {                
                 StartTimeLabel.Enabled = false;
                 StartTimeTextBox.Enabled = false;
@@ -62,28 +62,6 @@ namespace Jiffy
             }
 
             timerForm.UpdateDisplay(subject, end, start, duration);
-            /*
-            if (EndTimeTextBox.Enabled)
-            {
-                
-                if (StartTimeTextBox.Enabled)
-                {
-                    TimeSpan.TryParse(StartTimeTextBox.Text, out start);
-                } else
-                {
-                    duration = Int32.Parse(HourTextBox.Text) * 60 + Int32.Parse(MinuteTextBox.Text);
-                }
-
-            } else
-            {
-                TimeSpan.TryParse(StartTimeTextBox.Text, out start);
-                
-                timerForm.UpdateDisplay(subject, start, duration);
-            }
-            
-            */
-
-
             Close();
         }
 
@@ -121,7 +99,7 @@ namespace Jiffy
 
         private void Check()
         {
-            if (StartTimeTextBox.Text != "  :" && (HourTextBox.Text != "" || MinuteTextBox.Text != ""))
+            if (StartTimeTextBox.Text != "  :" && (HourTextBox.Text != "0" || MinuteTextBox.Text != "00"))
             {
                 EndTimeCheckBox.Enabled = false;
             }

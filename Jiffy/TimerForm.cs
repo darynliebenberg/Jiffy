@@ -13,6 +13,7 @@ namespace Jiffy
         TimeSpan startTime;
         TimeSpan endTime;
         bool timer = false;
+        int update = 1000;
 
         public TimerForm()
         {
@@ -61,6 +62,7 @@ namespace Jiffy
                     {
                         timer = true;
                         InfoPanel.Hide();
+                        update = 100;
                     }
                     if (timer)
                     {
@@ -77,11 +79,12 @@ namespace Jiffy
                             Thread.Sleep(5000);
                             timer = false;
                             InfoPanel.Show();
+                            update = 1000;
                         }
                     }
                     Refresh();
                 });                
-                Thread.Sleep(1000);
+                Thread.Sleep(update);
             }
         }
 
