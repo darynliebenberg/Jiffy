@@ -140,6 +140,12 @@ namespace Jiffy
             #endregion
             ConfigurationForm configuration = new ConfigurationForm();
             configuration.Show(this);
+            NativeMethods.PreventSleep();
+        }
+
+        private void TimerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            NativeMethods.AllowSleep();
         }
     }
 }

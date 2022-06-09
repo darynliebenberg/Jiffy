@@ -143,6 +143,7 @@
             this.KeyPreview = true;
             this.Name = "TimerForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TimerForm_FormClosing);
             this.Shown += new System.EventHandler(this.TimerForm_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TimerForm_KeyDown);
             this.TimerPanel.ResumeLayout(false);

@@ -71,6 +71,7 @@
     <Compile Include="ConfigurationForm.Designer.cs">
       <DependentUpon>ConfigurationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PreventSleep.cs" />
     <Compile Include="TimerForm.cs">
       <SubType>Form</SubType>
     </Compile>
